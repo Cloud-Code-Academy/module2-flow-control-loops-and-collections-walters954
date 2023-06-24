@@ -1,5 +1,5 @@
 
-# Developer Kickstart Week 1: Variables, Data Types, and Operators in Apex
+# Developer Kickstart Week 2: Flow Control, Loops, and Collections
 
 This project is part of the Developer Kickstart Week 1 curriculum at Cloud Code Academy. It's designed to help beginner Salesforce developers learn and practice using variables, data types, and operators in the Apex programming language.
 
