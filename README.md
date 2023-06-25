@@ -1,17 +1,17 @@
 
 # Developer Kickstart Week 2: Flow Control, Loops, and Collections
 
-This project is part of the Developer Kickstart Week 1 curriculum at Cloud Code Academy. It's designed to help beginner Salesforce developers learn and practice using variables, data types, and operators in the Apex programming language.
+This project is part of the Developer Kickstart Week 2 curriculum at Cloud Code Academy. It is designed to help beginner Salesforce developers learn and practice flow control, loops, and collections in the Apex programming language.
 
 ## Goals of the Practice
 
-Through this practice project, you'll gain foundational knowledge about:
+Through this practice project, you will gain foundational knowledge about:
 
-- Different data types in Apex, such as Integer, Decimal, Double, String, Boolean, and more.
-- How to declare and use variables in Apex.
-- How to use various operators in Apex, including arithmetic, comparison, and logical operators.
+- Flow control mechanisms in Apex, such as if-else statements and switch statements, to control the execution path based on conditions.
+- Looping constructs in Apex, such as for loops, while loops, and do-while loops, to iterate over a set of statements or a collection of elements.
+- Working with collections in Apex, including lists, sets, and maps, to store and manipulate data efficiently.
 
-This foundational knowledge will prepare you for more advanced topics in Salesforce development.
+By mastering flow control, loops, and collections, you will enhance your ability to write flexible and powerful Apex code. These concepts are fundamental to building robust and efficient solutions in Salesforce.
 
 ## Setup
 
