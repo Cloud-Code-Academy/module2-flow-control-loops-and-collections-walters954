@@ -14,7 +14,7 @@
 * in flow control, loops, and collections. By mastering these concepts, developers will be able to write more
 * efficient and effective code in their Salesforce projects.
 
-* @author Warren Walters - Cloud Code Academy
+* @author Your Name
 * @version 1.0
 */
 
