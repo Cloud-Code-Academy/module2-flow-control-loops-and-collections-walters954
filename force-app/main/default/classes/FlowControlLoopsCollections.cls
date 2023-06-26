@@ -21,9 +21,9 @@
 public with sharing class FlowControlLoopsCollections {
     
     /**
-     * Compares two numbers and prints "Hello World!" if the first number is greater than the second number.
+     * Compares two numbers and return "Hello World!" if the first number is greater than the second number.
      * If either of the numbers is null, return null.
-     * Example: helloWorld(40, 10) should print "Hello World!"
+     * Example: helloWorld(40, 10) should return "Hello World!"
      * @param x The first number.
      * @param y The second number.
      * @return "Hello World!" if x > y, null otherwise.
@@ -119,11 +119,11 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method prints "Hello World!" three times, with each occurrence separated by a semicolon.
-     * Example: printHelloWorld() should return "Hello World!; Hello World!; Hello World!;"
+     * This method return "Hello World!" three times, with each occurrence separated by a semicolon.
+     * Example: returnHelloWorld() should return "Hello World!; Hello World!; Hello World!;"
      * @return The string "Hello World!; Hello World!; Hello World!;"
      */
-    public static String printHelloWorld() {
+    public static String returnHelloWorld() {
         // Initialize the result String
 
         // Use a for loop to append 'Hello World!;' to the result string three times
