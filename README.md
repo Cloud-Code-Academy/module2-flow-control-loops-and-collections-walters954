@@ -14,6 +14,7 @@ Through this practice project, you will gain foundational knowledge about:
 By mastering flow control, loops, and collections, you will enhance your ability to write flexible and powerful Apex code. These concepts are fundamental to building robust and efficient solutions in Salesforce.
 
 ## Setup
+[Setup Video](https://vimeo.com/839597882/46fc06d93e)
 
 To get started, you'll need a Salesforce Trailhead Playground. If you don't have one, you can create it for free from any Trailhead module.
 
