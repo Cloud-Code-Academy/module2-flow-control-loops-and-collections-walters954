@@ -120,8 +120,8 @@ public with sharing class FlowControlLoopsCollections {
 
     /**
      * This method return "Hello World!" three times, with each occurrence separated by a semicolon.
-     * Example: returnHelloWorld() should return "Hello World!; Hello World!; Hello World!;"
-     * @return The string "Hello World!; Hello World!; Hello World!;"
+     * Example: returnHelloWorld() should return "Hello World!; Hello World!; Hello World!; "
+     * @return The string "Hello World!; Hello World!; Hello World!; "
      */
     public static String returnHelloWorld() {
         // Initialize the result String

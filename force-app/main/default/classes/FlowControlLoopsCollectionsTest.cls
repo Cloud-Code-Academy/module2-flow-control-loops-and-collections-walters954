@@ -121,10 +121,11 @@ public with sharing class FlowControlLoopsCollectionsTest {
         result = FlowControlLoopsCollections.sumUpToLimit(-5);
         Assert.areEqual(0, result, 'Incorrect sum for negative limit');
     }
+    
     @IsTest
     static void testReturnHelloWorld() {
         String result = FlowControlLoopsCollections.returnHelloWorld();
-        Assert.isTrue(result.contains('Hello World!; Hello World!; Hello World!;'), 'Incorrect result for returnHelloWorld');
+        Assert.areEqual('Hello World!; Hello World!; Hello World!; ', result, 'Incorrect result for returnHelloWorld');
     }
 
     @IsTest
