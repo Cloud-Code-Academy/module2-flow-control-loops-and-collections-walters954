@@ -171,6 +171,7 @@ public with sharing class FlowControlLoopsCollectionsTest {
         List<Integer> result = FlowControlLoopsCollections.createIntegerList(5);
         List<Integer> expectedList = new List<Integer>{1, 2, 3, 4, 5};
         Assert.areEqual(expectedList, result, 'Incorrect list created');
+        Assert.areEqual(5, expectedList.size(), 'List has too many values.');
     }
 
     @IsTest

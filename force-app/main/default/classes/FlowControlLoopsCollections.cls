@@ -267,7 +267,7 @@ public with sharing class FlowControlLoopsCollections {
      *  Example: findWordInList("World", ['Hello', 'World', 'Goodbye']) should return 1
      * @param wordToFind The word to find in the list.
      * @param words The list of words to search.
-     * @return The position of the word in the list as a string or 'Word not found' if the word was not found.
+     * @return The position of the word in the list as a string or -1 if the word was not found.
      */
     public static Integer findWordInList(String wordToFind, List<String> words) {
         // The variable to store the index of the word
