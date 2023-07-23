@@ -137,26 +137,6 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method takes a string as a parameter, and calculates the number of vowels in the string.
-     * For simplicity, we will consider only five vowels: 'a', 'e', 'i', 'o', 'u', and we will ignore case.
-     * Example: countVowels("Hello World!") should return 3
-     * @param s The string in which to count vowels.
-     * @return The number of vowels in the string.
-     */
-    public static Integer countVowels(String str) {
-        // Initialize the result Integer
-
-        /*
-        for () {
-        }
-        */
-
-        return null; // Replace null with the variable you used to store the result
-    }
-
-
-
-    /**
      * This method takes a string and a number as parameters, and returns a new string 
      * where the original string is repeated the given number of times, with each 
      * repetition separated by a semicolon.
@@ -287,21 +267,6 @@ public with sharing class FlowControlLoopsCollections {
     public static Decimal countChange() {
         // The list of change in the wallet, represented in cents
         List<Decimal> changeInWallet = new List<Decimal>{0.5, 10, 3.84, 24.6, 9.08, 50, 4.90}; //DO NOT CHANGE
-
-        return null; // Replace null with the variable you used to store the result
-    }
-
-    
-
-    /**
-     * Loops over the list of scientists and concatenates their names together with a comma if it contains the letter 'G'.
-     * The final string should not end with a comma.
-     * Example: findTheScientist() should return "Grace Hopper,Guido van Rossum"
-     * @return The concatenated string of scientists' names that contain the letter 'G'.
-     */
-    public static String findTheScientist() {
-        // The list of scientists' names
-        List<String> scientistNames = new List<String>{'Tim Berners-Lee', 'Alan Turing', 'Grace Hopper', 'Donald Knuth', 'Guido van Rossum', 'Ken Thompson'};
 
         return null; // Replace null with the variable you used to store the result
     }

@@ -129,18 +129,6 @@ public with sharing class FlowControlLoopsCollectionsTest {
     }
 
     @IsTest
-    static void testCountVowels() {
-        Integer result = FlowControlLoopsCollections.countVowels('Hello World!');
-        Assert.areEqual(3, result, 'Incorrect vowel count for "Hello World!"');
-        
-        result = FlowControlLoopsCollections.countVowels('Supra');
-        Assert.areEqual(2, result, 'Incorrect vowel count for "Supra"');
-        
-        result = FlowControlLoopsCollections.countVowels('The quick brown fox jumps over the lazy dog');
-        Assert.areEqual(11, result, 'Incorrect vowel count for "The quick brown fox jumps over the lazy dog"');
-    }
-
-    @IsTest
     static void testRepeatString() {
         String result = FlowControlLoopsCollections.repeatString('Hello World!', 3);
         Assert.areEqual('Hello World!; Hello World!; Hello World!', result, 'Incorrect result for repeatString with count 3');
@@ -210,13 +198,6 @@ public with sharing class FlowControlLoopsCollectionsTest {
     static void testCountChange() {
         Decimal result = FlowControlLoopsCollections.countChange();
         Assert.areEqual(48.02, result, 'Incorrect total value');
-    }
-
-    @IsTest
-    static void testFindTheScientist() {
-        String result = FlowControlLoopsCollections.findTheScientist();
-        Assert.areEqual('Grace Hopper,Guido van Rossum', result, 'Incorrect concatenated string');
-
     }
 
     @IsTest
