@@ -137,10 +137,10 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method takes a string and a number as parameters, and returns a new string 
-     * where the original string is repeated the given number of times, with each 
-     * repetition separated by a semicolon.
-     * Example: repeatString("Hello World!", 3) should return "Hello World!; Hello World!; Hello World!;"
+     * This method takes a string and a number as parameters, and returns a new string
+	 * where the original string is repeated the given number of times, with each
+	 * repetition separated by a semicolon. Do not add a semicolon after the last repetition.
+	 * Example: repeatString("Hello World!", 3) should return "Hello World!; Hello World!; Hello World!"
      * @param inputString The string to be repeated.
      * @param repeatCount The number of times the string should be repeated.
      * @return The new string with the inputString repeated repeatCount times.
