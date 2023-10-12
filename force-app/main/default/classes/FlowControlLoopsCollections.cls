@@ -9,24 +9,23 @@
 * - Using jump statements like break and continue to control the flow of execution in loops and switch statements.
 * - Working with for loops to iterate over a set of elements in Apex.
 * - Understanding collections and using lists and maps to store and manipulate data.
-
+*
 * This class is designed for developers who have a basic understanding of Apex and want to deepen their knowledge
 * in flow control, loops, and collections. By mastering these concepts, developers will be able to write more
 * efficient and effective code in their Salesforce projects.
-
+*
 * @author Your Name
-* @version 1.0
 */
 
 public with sharing class FlowControlLoopsCollections {
     
     /**
-     * Compares two numbers and return "Hello World!" if the first number is greater than the second number.
-     * If either of the numbers is null, return null.
+     * Compares two numbers and return "Hello World!" x is greater than the y.
+     * If either of the numbers is null or x is less than y, return null.
      * Example: helloWorld(40, 10) should return "Hello World!"
      * @param x The first number.
      * @param y The second number.
-     * @return "Hello World!" if x > y, null otherwise.
+     * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
         return null; // Replace null with the variable you used to store the result
@@ -109,17 +108,23 @@ public with sharing class FlowControlLoopsCollections {
 
 
     /**
-     * This method demonstrates a for loop by summing all the integers up to a given limit.
+     * Sum all the integers up to a given limit.
      * Example: sumUpToLimit(5) should return 15
      * @param intLimit The number up to which integers will be summed.
      * @return The sum of all integers up to the limit.
      */
     public static Integer sumUpToLimit(Integer intLimit) {
+        /* 
+         for (){
+            
+         }
+        */
+
         return null; // Replace null with the variable you used to store the result
     }
 
     /**
-     * This method return "Hello World!" three times, with each occurrence separated by a semicolon.
+     * Generate String "Hello World!" three times, with each occurrence separated by a semicolon.
      * Example: returnHelloWorld() should return "Hello World!; Hello World!; Hello World!; "
      * @return The string "Hello World!; Hello World!; Hello World!; "
      */
@@ -137,9 +142,9 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method takes a string and a number as parameters, and returns a new string
-	 * where the original string is repeated the given number of times, with each
-	 * repetition separated by a semicolon. Do not add a semicolon after the last repetition.
+     * Generate a string where the input string is repeated the given number of times, with each
+	 * repetition separated by a semicolon. 
+     * Do not add a semicolon after the last repetition.
 	 * Example: repeatString("Hello World!", 3) should return "Hello World!; Hello World!; Hello World!"
      * @param inputString The string to be repeated.
      * @param repeatCount The number of times the string should be repeated.
@@ -161,7 +166,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method creates a List of integers and adds the integers 1, 2, and 3 to it.
+     * Creates a List of integers and adds the integers 1, 2, and 3 to it.
      * Example: createAndPopulateList() should return [1, 2, 3]
      * @return A List of integers containing the numbers 1, 2, and 3.
      */
@@ -178,7 +183,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method creates a List of integers and adds the integers from 1 to 5. Then it removes the number 3 from the list.
+     * Creates a List of integers and adds the integers from 1 to 5. Then it removes the number 3 from the list.
      * Example: createAndRemoveFromList() should return [1, 2, 4, 5]
      * @return A List of integers from 1 to 5, excluding the number 3.
      */
@@ -186,15 +191,14 @@ public with sharing class FlowControlLoopsCollections {
         // Create a new list of integers and add numbers 1 to 5
         List<Integer> numberList = new List<Integer>{1, 2, 3, 4, 5}; //DO NOT CHANGE
 
-        // Remove the 3rd element from the list (index starts at 0)
-        // remove number 3
-
+        // Remove the 3rd element (number 3) from the list (index starts at 0)
+        
         // Return the updated list
         return null; // Replace null with the variable you used to store the result
     }
 
     /**
-     * This method takes an integer 'n' and returns a List with integers from 1 to 'n'.
+     * Create a list filled with integers based on the input parameter.
      * Example: createIntegerList(5) should return [1, 2, 3, 4, 5] 
      * @param n The last integer in the List.
      * @return A List of integers from 1 to 'n'.
@@ -212,7 +216,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method takes a List of strings and returns a Set of strings.
+     * Remove duplicate values from the list of Strings.
      * The returned Set contains the unique strings from the input List.
      * Example: createStringSet(['a', 'b', 'a', 'c']) should return ['a', 'b', 'c']
      * @param inputList The List of strings.
@@ -259,7 +263,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method loops through the list of change and adds them up until it accumulates more than 40 and then stops counting.
+     * Loop through the list of change and adds them up until it accumulates more than 40 and then stops counting.
      * The change values are in cents and the total is to be calculated in dollars.
      * Example: countChange() should return 48.02
      * @return The total value in dollars, stopped at the point when it exceeds 40 dollars.
@@ -272,9 +276,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method demonstrates the usage of a Map collection in Apex.
-     * The method initializes an empty Map that takes Strings as keys and Integers as values.
-     * It then adds five key-value pairs to the map, where the keys are the names of fruits and the values are their quantities.
+     * Create a map that has five key-value pairs to the map, where the keys are the names of fruits and the values are their quantities.
      * Example: addItemsToMap() should return "Apples => 5, Oranges => 10, Bananas => 15, Pears => 20, Grapes => 25"
      * @return The Map of fruits and their quantities.
      */
@@ -292,11 +294,10 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method demonstrates how to get a value from a Map using a key.
-     * The method initializes a Map that takes Strings as keys and Integers as values.
-     * It then adds four key-value pairs to the map, where the keys are the names of employees and the values are their salaries.
-     * The method then returns the salary of the employee whose name is passed as an argument.
+     * Create a map where the keys are the names of employees and the values are their salaries.
+     * Then returns the salary of the employee whose name is specified.
      * Example: getSalary("John Doe") should return 50000
+     * Resource: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_map.htm#apex_System_Map_get
      * @param employeeName The name of the employee.
      * @return The salary of the employee, or null if the employee is not found in the Map.
      */
@@ -316,11 +317,11 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * This method demonstrates how to iterate over a Map using a for loop.
-     * The method initializes a Map that takes Strings as keys and Integers as values.
-     * It then adds four key-value pairs to the map, where the keys are the names of employees and the values are their salaries.
-     * Then, it iterates over the map and checks if an employee's salary is more than 55000.
-     * If it is, it adds the employee to a list of employees that is returned by the method.
+     * Create a map where the keys are the names of employees and the values are their salaries.
+     * Then, iterates over the map and checks if an employee's salary is more than 55000.
+     * If it is, add the employee's name to a list of employees that is returned by the method.
+     * Remember that a Map is a collection of key-value pairs. Key are a set of unique values, so you can't have duplicate keys. Values are a list of values, so you can have duplicate values.
+     * Resource: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_loops_for_lists.htm
      * Example: getHighPaidEmployees() should return ['Jane Smith', 'Alice Johnson']
      * @return A list of employee names who have a salary more than 55000.
      */
