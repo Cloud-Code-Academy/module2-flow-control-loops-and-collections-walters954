@@ -263,14 +263,14 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
-     * Loop through the list of change and adds them up until it accumulates more than 40 and then stops counting.
+     * Loop through the list of money and adds them up until it accumulates more than 40 and then stops counting.
      * The change values are in cents and the total is to be calculated in dollars.
-     * Example: countChange() should return 48.02
+     * Example: countMoney() should return 48.02
      * @return The total value in dollars, stopped at the point when it exceeds 40 dollars.
      */
-    public static Decimal countChange() {
-        // The list of change in the wallet, represented in cents
-        List<Decimal> changeInWallet = new List<Decimal>{0.5, 10, 3.84, 24.6, 9.08, 50, 4.90}; //DO NOT CHANGE
+    public static Decimal countMoney() {
+        // The list of money in the wallet, represented in dollars and cents
+        List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; //DO NOT CHANGE
 
         return null; // Replace null with the variable you used to store the result
     }

@@ -195,8 +195,8 @@ public with sharing class FlowControlLoopsCollectionsTest {
     }
 
     @IsTest
-    static void testCountChange() {
-        Decimal result = FlowControlLoopsCollections.countChange();
+    static void testCountMoney() {
+        Decimal result = FlowControlLoopsCollections.countMoney();
         Assert.areEqual(48.02, result, 'Incorrect total value');
     }
 
