@@ -160,6 +160,11 @@ public with sharing class FlowControlLoopsCollectionsTest {
         List<Integer> expectedList = new List<Integer>{1, 2, 3, 4, 5};
         Assert.areEqual(expectedList, result, 'Incorrect list created');
         Assert.areEqual(5, expectedList.size(), 'List has too many values.');
+
+        result = FlowControlLoopsCollections.createIntegerList(9);
+        expectedList = new List<Integer>{1, 2, 3, 4, 5, 6, 7, 8, 9};
+        Assert.areEqual(expectedList, result, 'Incorrect list created');
+        Assert.areEqual(9, expectedList.size(), 'List has too many values.');
     }
 
     @IsTest
@@ -167,6 +172,11 @@ public with sharing class FlowControlLoopsCollectionsTest {
         List<String> inputList = new List<String>{'a', 'b', 'a', 'c'};
         Set<String> result = FlowControlLoopsCollections.createStringSet(inputList);
         Set<String> expectedSet = new Set<String>{'a', 'b', 'c'};
+        Assert.areEqual(expectedSet, result, 'Incorrect set created');
+
+        inputList = new List<String>{'Abby', 'Bobby', 'Abby', 'Cathy'};
+        result = FlowControlLoopsCollections.createStringSet(inputList);
+        expectedSet = new Set<String>{'Abby', 'Bobby', 'Cathy'};
         Assert.areEqual(expectedSet, result, 'Incorrect set created');
     }
 
