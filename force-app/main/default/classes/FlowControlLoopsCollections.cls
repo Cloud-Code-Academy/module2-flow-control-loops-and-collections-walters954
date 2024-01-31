@@ -1,5 +1,5 @@
 /**
-* This is the FlowControlLoopsCollections class, part of the Developer Kickstart Week 2 curriculum
+* This is the FlowControlLoopsCollections class, part of the Developer Kickstart Module 2 curriculum
 * at Cloud Code Academy. This class focuses on flow control, loops, and collections in Apex programming.
 * The class provides a comprehensive understanding of various flow control structures, including if statements,
 * jump statements, and loops like for loops. It also covers working with collections such as lists and maps.
@@ -20,6 +20,7 @@
 public with sharing class FlowControlLoopsCollections {
     
     /**
+     * Question 1
      * Compares two numbers and return "Hello World!" x is greater than the y.
      * If either of the numbers is null or x is less than y, return null.
      * Example: helloWorld(40, 10) should return "Hello World!"
@@ -32,6 +33,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 2
      * Checks if a person is eligible to vote based on their age.
      * A person is eligible to vote if they are 18 years old or older.
      * If the age is less than 18, the method will return false.
@@ -44,6 +46,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 3
      * Finds the maximum of two numbers.
      * If both numbers are equal, it returns that number.
      * Example: findMax(58, 200) should return 200
@@ -60,6 +63,7 @@ public with sharing class FlowControlLoopsCollections {
 
 
     /**
+     * Question 4
      * Checks if a number is positive, negative, or zero.
      * If the number is null, return null.
      * Example: checkNumber(5) should return "Positive"
@@ -71,6 +75,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 5
      * Checks if a number is even or odd.
      * If the number is null, return null.
      * Example: checkEvenOdd(2) should return "Even"
@@ -82,6 +87,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 6
      * Checks if a string is empty, null, or contains text.
      * Example: checkString("") should return "Empty"
      * @param a The string to check.
@@ -92,6 +98,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 7
      * Determines the grade based on the score.
      * Grade A if score is greater than or equal to 90.
      * Grade B if score is greater than or equal to 80.
@@ -108,6 +115,7 @@ public with sharing class FlowControlLoopsCollections {
 
 
     /**
+     * Question 8
      * Sum all the integers up to a given limit.
      * Example: sumUpToLimit(5) should return 15
      * @param intLimit The number up to which integers will be summed.
@@ -124,6 +132,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 9
      * Generate String "Hello World!" three times, with each occurrence separated by a semicolon.
      * Example: returnHelloWorld() should return "Hello World!; Hello World!; Hello World!; "
      * @return The string "Hello World!; Hello World!; Hello World!; "
@@ -142,6 +151,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 10
      * Generate a string where the input string is repeated the given number of times, with each
 	 * repetition separated by a semicolon. 
      * Do not add a semicolon after the last repetition.
@@ -166,6 +176,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 11
      * Creates a List of integers and adds the integers 1, 2, and 3 to it.
      * Example: createAndPopulateList() should return [1, 2, 3]
      * @return A List of integers containing the numbers 1, 2, and 3.
@@ -183,6 +194,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 12
      * Creates a List of integers and adds the integers from 1 to 5. Then it removes the number 3 from the list.
      * Example: createAndRemoveFromList() should return [1, 2, 4, 5]
      * @return A List of integers from 1 to 5, excluding the number 3.
@@ -198,6 +210,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 13
      * Create a list filled with integers based on the input parameter.
      * Example: createIntegerList(5) should return [1, 2, 3, 4, 5] 
      * @param n The last integer in the List.
@@ -216,6 +229,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 14
      * Remove duplicate values from the list of Strings.
      * The returned Set contains the unique strings from the input List.
      * Example: createStringSet(['a', 'b', 'a', 'c']) should return ['a', 'b', 'c']
@@ -232,6 +246,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 15
      * Iterates over a list of integers and sums only the positive integers.
      * Example: sumPositiveIntegers() should return 12
      * @return The sum of positive integers from the list.
@@ -247,6 +262,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 16
      * Iterates over a list of strings and searches for a specific word. Once found, it breaks the loop.
      *  Example: findWordInList("World", ['Hello', 'World', 'Goodbye']) should return 1
      * @param wordToFind The word to find in the list.
@@ -263,6 +279,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 17
      * Loop through the list of money and adds them up until it accumulates more than 40 and then stops counting.
      * The change values are in cents and the total is to be calculated in dollars.
      * Example: countMoney() should return 48.02
@@ -276,6 +293,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 18
      * Create a map that has five key-value pairs to the map, where the keys are the names of fruits and the values are their quantities.
      * Example: addItemsToMap() should return "Apples => 5, Oranges => 10, Bananas => 15, Pears => 20, Grapes => 25"
      * @return The Map of fruits and their quantities.
@@ -294,6 +312,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 19
      * Create a map where the keys are the names of employees and the values are their salaries.
      * Then returns the salary of the employee whose name is specified.
      * Example: getSalary("John Doe") should return 50000
@@ -317,6 +336,7 @@ public with sharing class FlowControlLoopsCollections {
     }
 
     /**
+     * Question 20
      * Create a map where the keys are the names of employees and the values are their salaries.
      * Then, iterates over the map and checks if an employee's salary is more than 55000.
      * If it is, add the employee's name to a list of employees that is returned by the method.
