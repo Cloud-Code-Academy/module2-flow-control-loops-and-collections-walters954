@@ -7,9 +7,12 @@ on:
 jobs:
   remove_label:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v2
-      - uses: actions-ecosystem/action-remove-labels@v1
+      - uses: actions-ecosystem/action-remove-labels@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           labels: 'needs-review'
