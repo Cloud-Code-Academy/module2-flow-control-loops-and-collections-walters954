@@ -1,35 +1,68 @@
-name: Module 2 Run Apex Unit Tests Manually
+name: Module 2 Run Apex Unit Tests Automated
 
+# Definition when the workflow should run
 on:
-    workflow_dispatch:
-        inputs:
-            sfdx_auth_url:
-                description: "SFDX Auth URL"
-                required: true
+  # The workflow will run whenever an event happens on a pull request
+  pull_request:
+    # The events are that a PR is opened, or when a commit is pushed
+    # to a branch that has an existing pull request
+    types: [opened, synchronize, reopened]
+    # The branches filter allows to specify that this workflow should only
+    # run if the branch name is "develop". This way we prevent this workflow
+    # from running when PRs are opened on other branches
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
-        steps:
-            - uses: actions/checkout@v2
+    steps:
 
-            - name: Install sfdx with npm
-              run: |
-                  npm i @salesforce/cli --global
+    - uses: actions/checkout@v2
 
-            - name: Store SFDX Auth URL In File
-              run: | #sfdx force:org:display --verbose > Sfdx Auth URL
-                  echo "${{ github.event.inputs.sfdx_auth_url }}" > sfdxauth.txt
+    - name: Install sfdx with npm
+      run: |
+        npm i @salesforce/cli --global
 
-            - name: Add SFDX Org
-              run: |
-                  sf force auth sfdxurl store -f sfdxauth.txt -a org
+    - name: Authenticate Dev Hub
+      run: |
+        echo ${{ secrets.CCA_AUTH_URL }} > sfdx_auth
+        sfdx force:auth:sfdxurl:store -f sfdx_auth -d -a DevHub
 
-            - name: Deploy classes to org
-              run: |
-                  sf force source deploy -u org -p force-app/main/default/classes/
+    - name: Display Dev Hub Limits
+      run: |
+        sfdx force:limits:api:display -u DevHub
 
-            - name: Run Apex Unit Tests
-              run: |
-                  sf apex run test -r human -c --wait 10 -o org -n FlowControlLoopsCollectionsTest
+    - name: Create Scratch Org
+      id : create-scratch-org
+      run: |
+        sf org create scratch --duration-days 1 --alias CI_ScratchOrg --definition-file config/project-scratch-def.json
+
+    - name: Deploy classes to org
+      run: |
+        sf project deploy start --target-org CI_ScratchOrg
+    # sf force source deploy -p force-app/main/default/classes/ -o CI_ScratchOrg
+
+    - name: Run Apex Unit Tests
+      run: |
+        sf apex test run -r human -c --wait 10 --target-org CI_ScratchOrg
+
+    # Install SFDX scanner
+   # - name: 'Installing SFDX scanner'
+   #   run: sf plugins install @salesforce/sfdx-scanner
+
+#    - name: 'Scan code'
+#      run: |
+#        cd codescan
+#        sf scanner run --format sarif --target '../force-app' --category "Design,Best Practices,Performance" --outfile 'apexScanResults.sarif'
+#        cd ..  
+
+    # Now we upload the .sarif file as explained in the previous step
+#    - name: Upload SARIF file
+#      uses: github/codeql-action/upload-sarif@v3
+#      with:
+#        sarif_file: codescan/apexScanResults.sarif
+
+    - name: Delete Scratch Org
+      if: always()
+      run: |
+        sf org delete scratch --target-org CI_ScratchOrg --no-prompt
